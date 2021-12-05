@@ -1,0 +1,294 @@
+
+/* ============================================================ HEADER */
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+/* ============================================= HEADER - NAVBAR */
+.header__navbar {
+    width: 1100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.header__navbar-list {
+    padding-left: 0;
+    margin: 0;
+    display: flex;
+}
+
+.header__navbar-list-item {
+    font-size: 1.2rem;
+    list-style: none;
+    transition: color 0.2s;
+}
+
+.header__navbar-list-item:hover {
+    cursor: pointer;
+    color: #fdcb6e;
+}
+
+.header__navbar-list-item + .header__navbar-list-item {
+    margin-left: 20px;
+}
+
+.header__navbar-text {
+    margin: 0 180px;
+    font-size: 3.2rem;
+    cursor: default;
+}
+
+.header__line {
+    width: 100%;
+    height: 1px;
+    background-color: #b2bec3;
+}
+
+/* ============================================= HEADER - IMAGE */
+.header__page {
+    /* width: 100%; */
+    height: 700px;
+    margin: 0;
+    position: relative;
+}
+
+.page__image {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.page__title {
+    position: absolute;
+    top: 300px;
+    left: 400px;
+    font-size: 9rem;
+    color: var(--white-color);
+}
+
+.page__link {
+    position: absolute;
+    top: 380px;
+    left: 400px;
+}
+
+.link__home,
+.link__text {
+    color: var(--white-color);
+    font-size: 2rem;
+}
+
+.link__home {
+    text-decoration: none;
+    margin-right: 10px;
+}
+.link__home:hover {
+    animation: hoverLinkHome 0.2s linear forwards;
+}
+@keyframes hoverLinkHome {
+    to {
+        color: #fdcb6e;
+    }
+}
+
+/* ============================================================ BODY */
+
+.body {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.body__form-personal-info {
+    width: 750px;
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 5px;
+    padding: 40px;
+    margin-right: 30px;
+}
+
+.form-personal-info__title {
+    font-size: 3rem;
+    margin-bottom: 50px;
+    color: #2c3e50;
+}
+
+.form {
+    width: calc(750px - 80px);
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.form__check-in,
+.form__check-out,
+.form__adults,
+.form__children,
+.form__email,
+.form__phone,
+.form__address,
+.form__first-name,
+.form__last-name {
+    width: calc((750px - 120px) / 2);
+    font-size: 1.6rem;
+    padding: 8px;
+    outline: none;
+    border: 1px solid #bdc3c7;
+    border-radius: 5px;
+    margin: 10px;
+}
+
+.form__button-submit {
+    position: relative;
+    top: 80px;
+    right: 325px;
+    padding: 0 40px;
+    font-size: 1.5rem;
+    background-color: var(--white-color);
+    border: 1px solid #f39c12;
+}
+
+.form__button-submit:hover {
+    cursor: pointer;
+    animation: hoverButtonSubmit 0.2s linear forwards;
+}
+@keyframes hoverButtonSubmit {
+    to {
+        border-color: var(--black-color);
+    }
+}
+
+.body__box-selected-room {
+    width: 360px;
+    margin-left: 30px;
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    box-shadow: 0 0 5px;
+}
+
+.box-selected-room__selected-room {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: #2c3e50;
+}
+
+.box-selected-room__image-selected-room {
+    width: 278px;
+    height: 185px;
+}
+
+.box-selected-room__title-selected-room {
+    font-size: 2.4rem;
+    margin-top: 15px;
+    color: #2c3e50;
+}
+
+.box-selected-room__price {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-top: 8px;
+}
+
+.price__price,
+.price__subtitle-price {
+    font-size: 1.6rem;
+    color: #d98449;
+}
+
+.price__price {
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.box-selected-room__info {
+    display: flex;
+    flex-direction: column;
+}
+
+.info__checkin-checkout,
+.info__adults-children,
+.info__nights-services {
+    display: flex;
+    justify-content: flex-start;
+    border-top: 1px solid #bdc3c7;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-top: 10px;
+}
+
+.checkin-checkout__check-in,
+.checkin-checkout__check-out,
+.adults-children__adults,
+.adults-children__children,
+.nights-services__nights,
+.nights-services__services {
+    width: calc(279px / 2);
+    display: flex;
+    flex-direction: column;
+}
+
+
+.label {
+    font-size: 1.3rem;
+    font-weight: 800;
+    color: #8b8b8b;
+    margin-bottom: 10px;
+}
+
+.check-in__value,
+.check-out__value,
+.adults__value,
+.children__value,
+.nights__value,
+.services__value {
+    font-size: 1.6rem;
+    font-weight: 300;
+    color: #8b8b8b;
+}
+
+/* ============================================================ FOOTER */
+
+.footer {
+    background-color: #1e2529;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 70px;
+}
+
+.footer__tilte {
+    font-size: 4.2rem;
+    color: var(--white-color);
+}
+
+.footer__icons {
+    width: 200px;
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.icon {
+    font-size: 2rem;
+    color: var(--white-color);
+}
+
+.icon:hover {
+    cursor: pointer;
+    animation: hoverIcon 0.2s linear forwards;
+}
+@keyframes hoverIcon {
+    to {
+        color: #d98449;
+    }
+}

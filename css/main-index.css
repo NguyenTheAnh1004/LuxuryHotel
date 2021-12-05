@@ -1,0 +1,354 @@
+
+/* ============================================================ HEADER */
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+/* ============================================= HEADER - NAVBAR */
+.header__navbar {
+    width: 1100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.header__navbar-list {
+    padding-left: 0;
+    margin: 0;
+    display: flex;
+}
+
+.header__navbar-list-item {
+    font-size: 1.2rem;
+    list-style: none;
+    transition: color 0.2s;
+}
+
+.header__navbar-list-item:hover {
+    cursor: pointer;
+    color: #fdcb6e;
+}
+
+.header__navbar-list-item + .header__navbar-list-item {
+    margin-left: 20px;
+}
+
+.header__navbar-text {
+    margin: 0 180px;
+    font-size: 3.2rem;
+    cursor: default;
+}
+
+.header__line {
+    width: 100%;
+    height: 1px;
+    background-color: #b2bec3;
+}
+
+/* ============================================= HEADER - IMAGE */
+.header__image {
+    height: 900px;
+    margin: 0;
+    background-image: url('https://ygamin.bitbucket.io/sunset/1.1.0/assets/img/home_bg.jpg');
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.header__image-text {
+    position: absolute;
+    font-size: 9rem;
+    color: #deaa86;
+    top: 300px;
+    cursor: default;
+}
+.header__image-line-1 {
+    position: absolute;
+    width: 60px;
+    height: 2px;
+    background-color: #deaa86;
+    top: 390px;
+}
+
+.header__image-line-2 {
+    position: absolute;
+    width: 300px;
+    height: 2px;
+    background-color: #deaa86;
+    top: 395px;
+}
+
+.header__image-line-3 {
+    position: absolute;
+    width: 60px;
+    height: 2px;
+    background-color: #deaa86;
+    top: 400px;
+}
+
+/* ============================================================ BODY */
+.body {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.body-rooms {
+    width: 1100px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    margin-top: 50px;
+}
+
+.body-rooms__room {
+    flex: 1;
+    display: flex;
+    border-top: 1px solid #bdc3c7;
+    padding: 20px;
+}
+
+.body-rooms__room-image-title {
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid #bdc3c7;
+    padding-right: 20px;
+}
+
+.body-rooms__room-image {
+    width: 300px;
+    height: 150px;
+    border-radius: 8px;
+}
+
+.body-rooms__room-title {
+    font-size: 1.8rem;
+    margin: 8px 0;
+}
+
+.body-rooms__room-subtitle {
+    display: flex;
+}
+
+.room-subtitle__image {
+    width: 16px;
+    height: 16px;
+    margin-right: 10px;
+}
+
+.room-subtitle__text {
+    font-size: 1.4rem;
+    font-weight: 300;
+}
+
+.body-rooms__room-content {
+    display: flex;
+    flex: 1;
+}
+
+.body-rooms__room-content-desc {
+    flex: 4;
+}
+
+.room-content-desc__line-one {
+    font-size: 1.6rem;
+    font-weight: 600;
+    padding-left: 20px;
+}
+
+.body-rooms__room-content-price {
+    flex: 1;
+}
+
+.line-two-icon,
+.line-three-icon {
+    width: 16px;
+    height: 16px;
+}
+
+.line-two-text,
+.line-three-text {
+    font-size: 1.4rem;
+    font-weight: 300;
+}
+
+.room-content-desc__line-two,
+.room-content-desc__line-three {
+    padding-left: 20px;
+}
+
+.body-rooms__room-content-price {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.room-content-price__price {
+    font-size: 2rem;
+}
+
+.room-content-price__subtitle {
+    text-align: right;
+    font-size: 1.4rem;
+    margin-left: 30px;
+    margin-top: 10px;
+    font-weight: 300;
+}
+
+.room-content-price__button-check-in {
+    padding: 10px 20px;
+    margin-top: 10px;
+    text-decoration: none;
+    color: var(--white-color);
+    background-color: #e67e22;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    border: 2px solid #e67e22;
+}
+
+.room-content-price__button-check-in:hover {
+    animation: hoverButtonCheckIn 0.2s linear forwards;
+}
+@keyframes hoverButtonCheckIn {
+    to {
+        color: #e67e22;
+        background-color: var(--white-color);
+    }
+}
+
+/* ============================================================ BODY */
+
+.footer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #212121;
+}
+
+.footer-register-by-email {
+    width: 1100px;
+    display: flex;
+    padding: 20px 0;
+}
+
+.icon {
+    font-size: 2.3rem;
+    padding: 10px;
+    color: #7f8c8d;
+}
+
+.icon:hover {
+    cursor: pointer;
+    animation: hoverIcon 0.2s linear forwards;
+}
+@keyframes hoverIcon {
+    to {
+        color: #ecf0f1;
+    }
+}
+
+.icon:first-child {
+    margin-left: 80px;
+}
+
+.footer-register-by-email__form {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-register-by-email__text {
+    font-size: 1.4rem;
+    color: var(--white-color);
+    margin-bottom: 10px;
+}
+
+.footer-register-by-email__box {
+    display: flex;
+}
+
+.box__input {
+    font-size: 1.5rem;
+    width: 350px;
+    padding: 10px;
+    flex: 3;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+}
+.box__button {
+    flex: 1;
+    background-color: #e67e22;
+    color: var(--white-color);
+    border: 1px solid #e67e22;
+    border-radius: 5px;
+    margin-left: 5px;
+    font-size: 1.4rem;
+}
+
+.box__button:hover {
+    cursor: pointer;
+    animation: hoverButton 0.05s linear forwards;
+}
+@keyframes hoverButton {
+    to {
+        color: #e67e22;
+        background-color: transparent;
+    }
+}
+
+.footer-line {
+    width: 100%;
+    height: 1px;
+    background-color: #95a5a6;
+}
+
+.footer-lists {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 20px 0;
+}
+
+.footer-lists__list-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.list-box__title-list {
+    color: var(--white-color);
+    font-size: 1.4rem;
+    text-align: left;
+}
+
+.list-box__list {
+    margin-left: 110px;
+}
+
+.list-box__list-item {
+    color: #757575;
+    list-style: none;
+    font-size: 1.4rem;
+    margin: 5px 0;
+}
+
+.list-box__list-item:hover {
+    cursor: pointer;
+    animation: hoverItem 0.1s linear forwards;
+}
+@keyframes hoverItem {
+    to {
+        color: #e67e22;
+    }
+}

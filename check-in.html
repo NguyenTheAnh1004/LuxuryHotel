@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Đặt phòng</title>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+            <link rel="stylesheet" href="css\base.css">
+            <link rel="stylesheet" href="css\main-check-in.css">
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+            <link rel="stylesheet" href="fonts/fontawesome-free-5.15.4/css/all.min.css">
+        </head>
+
+        <body>
+            <header class="header">
+                <div class="header__navbar">
+                    <ul class="header__navbar-list">
+                        <li class="header__navbar-list-item">HOME</li>
+                        <li class="header__navbar-list-item">ABOUT US</li>
+                        <li class="header__navbar-list-item">ROOMS</li>
+                    </ul>
+                    <span class="header__navbar-text">Luxury Hotel</span>
+                    <ul class="header__navbar-list">
+                        <li class="header__navbar-list-item">RESERVATION</li>
+                        <li class="header__navbar-list-item">BLOG</li>
+                        <li class="header__navbar-list-item">CONTACTS</li>
+                    </ul>
+                </div>
+
+                <div class="header__line"></div>
+
+                <div class="header__page">
+                    <img class="page__image" src="https://mocah.org/uploads/posts/535025-accommodation.jpg" alt="">
+                    <span class="page__title">Đặt phòng</span>
+                    <div class="page__link">
+                        <a href="index.html" class="link__home">Home</a>
+                        <span class="link__text"> / Đặt phòng</span>
+                    </div>
+                </div>
+            </header> 
+            
+            <div class="body">
+                <div class="body__form-personal-info">
+                    <span class="form-personal-info__title">Thông tin cá nhân</span>
+                    <div class="form">
+                        <input onchange="checkin(); " type="date" class="form__check-in" required>
+                        <input onchange="checkout();" type="date" class="form__check-out" required>
+                        <select onchange="adults();" name="" id="adult" class="form__adults">
+                            <option value="0" class="form__adult"> </option>
+                            <option value="1" class="form__adult">1 người lớn</option>
+                            <option value="2" class="form__adult">2 người lớn</option>
+                            <option value="3" class="form__adult">3 người lớn</option>
+                        </select>
+                        <select onchange="child();" name="" id="child" class="form__children">
+                            <option value="0" class="form__child"> </option>
+                            <option value="1" class="form__child">1 trẻ em</option>
+                            <option value="2" class="form__child">2 trẻ em</option>
+                            <option value="3" class="form__child">3 trẻ em</option>
+                        </select>
+                        <input type="text" class="form__last-name" placeholder="Họ" required>
+                        <input type="text" class="form__first-name" placeholder="Tên" required>
+                        <input type="email" class="form__email" placeholder="Email" required>
+                        <input type="text" class="form__phone" placeholder="Số điện thoại" required>
+                        <input type="text" class="form__address" placeholder="Địa chỉ" required>
+                        <button onclick="clickSubmit();" class="form__button-submit">Đặt phòng</button>                 
+                    </div>
+                </div>
+
+                <div class="body__box-selected-room">
+                    <span class="box-selected-room__selected-room">Phòng đã chọn</span>
+                    <img src="" alt="" class="box-selected-room__image-selected-room">
+                    <span class="box-selected-room__title-selected-room"></span>
+                    <div class="box-selected-room__price">
+                        <span class="price__price"></span>
+                        <span class="price__subtitle-price">Mỗi đêm</span>
+                    </div>
+                    <div class="box-selected-room__info">
+                        <div class="info__checkin-checkout">
+                            <div class="checkin-checkout__check-in">
+                                <span class="label">NGÀY NHẬN PHÒNG</span>
+                                <span class="check-in__value"> </span>
+                            </div>
+                            <div class="checkin-checkout__check-out">
+                                <span class="label">NGÀY TRẢ PHÒNG</span>
+                                <span class="check-out__value"> </span>
+                            </div>
+                        </div>
+
+                        <div class="info__adults-children">
+                            <div class="adults-children__adults">
+                                <span class="label">NGƯỜI LỚN</span>
+                                <span class="adults__value"> </span>
+                            </div>
+                            <div class="adults-children__children">
+                                <span class="label">TRẺ EM</span>
+                                <span class="children__value"> </span>
+                            </div>
+                        </div>
+
+                        <div class="info__nights-services">
+                            <div class="nights-services__nights">
+                                <span class="label">ĐÊM</span>
+                                <span class="nights__value"> </span>
+                            </div>
+                            <div class="nights-services__services">
+                                <span class="label">DỊCH VỤ</span>
+                                <span class="services__value"> </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <footer class="footer">
+                <div class="footer__tilte">Luxury Hotel</div>
+                <div class="footer__icons">
+                    <i class="fab fa-facebook-f icon"></i>
+                    <i class="fab fa-twitter icon"></i>
+                    <i class="fab fa-google-plus-g icon"></i>
+                </div>
+            </footer>
+
+            <script src="main-check-in.js"></script>
+        </body>
+    </html>
